@@ -52,8 +52,11 @@ const SetupScreen = () => {
 	function checkComplete() {
 		console.log(firstName);
 		if(firstName.trim() == "" || lastName.trim() == "" || email.trim() == "" || phone.trim() == "") {
-			Alert.alert("Input is empty")
-		} 
+			// Alert.alert("Input is empty");
+			Alert.alert(firstName.trim());
+		} else if (!email.trim().includes('@') || !email.trim().includes('.')) {
+			Alert.alert("Need a domain name");
+		}
 		
 	}	
 };
