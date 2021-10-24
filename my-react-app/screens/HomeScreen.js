@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/core'
 import React from 'react'
-import { StyleSheet, Text, TouchableOpacity, View, Image, ScrollView} from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View, Image, ScrollView, Alert } from 'react-native'
 import { auth } from '../firebase'
 
 
@@ -27,14 +27,20 @@ const HomeScreen = () => {
             </TouchableOpacity> */}
 
             <View style={styles.topBar}>
-                <Text>User</Text>
-                <Text>Points</Text>
-                <Text>Cart</Text>
+                
+ 
+            <TouchableOpacity onPress = {() => { Alert.alert("Side bar appears")}}>
+                <Image style={styles.barImage} source={require("../assets/bars.png")} />
+            </TouchableOpacity>
+                <View style={styles.rightTopBar}>
+                    <Text style={styles.topBarText}>Points</Text>
+                    <Text style={styles.topBarText}>Cart</Text>
+                </View>
             </View>
 
             <ScrollView style={styles.itemScroll}>
 
-                <Text style={styles.heading}>Your Items</Text>
+                <Text style={styles.heading}>Suggested</Text>
 
                 <View style={styles.items}>
                     <Image style={styles.itemImage} source={require('../assets/bagel.jpg')} />
@@ -100,12 +106,26 @@ const HomeScreen = () => {
     const styles = StyleSheet.create({
         container: {
             flex: 1,
-            // justifyContent: 'center',
-            // alignItems: 'center',
+            backgroundColor: '#73FFCD',
         },
         topBar: {
             flexDirection: 'row',
-            backgroundColor: 'red',
+            backgroundColor: 'teal',
+            height: 50,
+            alignItems: 'center',
+        },
+        topBarText: {
+            marginLeft: 100,
+            marginRight: 20,
+        },
+        rightTopBar: {
+            flexDirection: 'row',
+            justifyContent: 'flex-end',
+            margin: 10,
+        },
+        barImage: {
+            height: 50,
+            width: 50,
         },
         heading: {
             fontSize: 50,
@@ -119,7 +139,9 @@ const HomeScreen = () => {
             alignItems: 'center',
             padding: 10,
             marginBottom: 20,
-            backgroundColor: 'rgba(244,164,96,1)'
+            // backgroundColor: 'rgba(244,164,96,1)'
+            backgroundColor: '#fff'
+
         },
         itemImage: {
             width: 100,
