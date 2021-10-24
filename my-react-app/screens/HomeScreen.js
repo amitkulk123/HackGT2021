@@ -2,12 +2,12 @@ import { useNavigation } from '@react-navigation/core'
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View, Image, ScrollView, Alert, Button } from 'react-native'
 import { auth } from '../firebase'
+import '../src/globalvars.js'
 
 
 const HomeScreen = () => {
-    // TODO: create variable to store numpoints
-    var numPoints = 0;
-
+    global.numPoints = 0;
+    global.subtotal = 0;
     
     const navigation = useNavigation()
     const handleSignOut = () => {
@@ -20,7 +20,7 @@ const HomeScreen = () => {
     }
 
     const alertPoints = () => {
-        Alert.alert("You have: " + numPoints + " points")
+        Alert.alert("You have: " + global.numPoints + " points")
     }
     
     
@@ -29,11 +29,20 @@ const HomeScreen = () => {
     }
 
     const handleBagelDescription= () => {
+        global.numPoints += 5
         navigation.navigate("Bagel")
     }
 
+    const handleBreadDescription= () => {
+        global.numPoints += 5
+        navigation.navigate("Bread")
+    }
     const handleProfilePage = () => {
         navigation.navigate("Profile")
+    }
+    const handleCakeDescription= () => {
+        global.numPoints += 5
+        navigation.navigate("Cake")
     }
 
     const handleFriendPage = () => {
@@ -59,7 +68,7 @@ const HomeScreen = () => {
                 <Image style={styles.barImage} source={require("../assets/bars.png")} />
             </TouchableOpacity>
                 <View style={styles.rightTopBar}>
-                    <Text onPress={alertPoints} style={styles.topBarText}>Points:</Text>
+                    <Text onPress={alertPoints} style={styles.topBarText}>Points</Text>
                     <Text onPress={handleCartDescription} style={styles.topBarText}>Cart</Text>
                     <Text onPress={handleFriendPage} style={styles.topBarText}>Friends</Text>
                     <TouchableOpacity onPress={handleProfilePage}>
@@ -89,7 +98,7 @@ const HomeScreen = () => {
                 </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity>
+                <TouchableOpacity onPress={handleCakeDescription}>
                 <View style={styles.items}>
                     <View>
                         <Image style={styles.itemImage} source={require('../assets/cake.jpg')} />
@@ -203,11 +212,16 @@ const HomeScreen = () => {
             textAlign: 'center',
             margin: 20,
         },
+        subheading: {
+            fontSize: 20,
+            textAlign: 'center',
+            margin: 15,
+        },
         items: {
             flexDirection: 'row',
             justifyContent: 'center',
             alignItems: 'center',
-            padding: 10,
+            padding: 5,
             marginBottom: 20,
             // backgroundColor: 'rgba(244,164,96,1)'
             backgroundColor: '#fff'
@@ -222,6 +236,7 @@ const HomeScreen = () => {
             fontSize: 20,
             margin: 20,
             fontFamily: "Times New Roman",
+            textAlign: 'center',
         },
         button: {
             backgroundColor: '#0782F9',

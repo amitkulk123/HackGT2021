@@ -3,18 +3,18 @@ import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View, Image, ScrollView, Alert, Button, TextInput } from 'react-native'
 import { auth } from '../../firebase'
 
+
 const handleButton = () => {
-    global.subtotal += 3.00
-    Alert.alert("Added a bagel to your cart")
+    global.subtotal += 3.50
+    Alert.alert("Added a slice of cake to your cart")
 }
 
 export default function BagelDescription() {
     return (
         <View style={styles.container}>
-            <Text style={styles.textFormat}>Bagels are tasty!</Text>
-            <Text style={styles.textFormat}>Enjoy the crisp, shiny crust of our freshly baked bagels</Text>
-            <Image style={styles.itemImage} source={require('../../assets/bagel.jpg')} />
-            <Button onPress={handleButton} title="Buy Now $3.00" />
+            <Text style={styles.textFormat}>Enjoy a delicious, savory piece of cake that will want you to get some more.</Text>
+            <Image style={styles.itemImage} source={require('../../assets/cake.jpg')} />
+            <Button onPress={handleButton} title="Buy Now $3.50" />
         </View>
 
         

@@ -5,7 +5,7 @@ import { auth } from '../../firebase'
 
 
 const handleButton = () => {
-    
+    global.subtotal += 7.00
     Alert.alert("Added a loaf to your cart")
 }
 

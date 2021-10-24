@@ -24,6 +24,7 @@ export default function App() {
         <Stack.Screen name="Friends" component={FriendScreen}/>
         <Stack.Screen name="Bagel" component={BagelDescription} />
         <Stack.Screen name="Bread" component={BreadDescription} />
+        <Stack.Screen name="Cake" component={CakeDescription} />
       </Stack.Navigator>
     </NavigationContainer>
   );
