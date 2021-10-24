@@ -1,17 +1,14 @@
 import { useNavigation } from '@react-navigation/core'
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View, Image, ScrollView, Alert, Button } from 'react-native'
-import { auth } from '../../firebase'
 
 
 
-export default function BagelDescription() {
+export default function Cart() {
     return (
         <View>
-            <Text>Bagels are tasty!</Text>
-            <Text>Available for $3.00</Text>
+            <Text>Your subtotal is </Text>
+            <Text>The number of points you have is</Text>
         </View>
-
-        // <Button title="Buy Now $3.00"/>
     );
   }
