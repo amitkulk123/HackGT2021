@@ -2,16 +2,11 @@ import { useNavigation } from '@react-navigation/core'
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View, Image, ScrollView, Alert, Button } from 'react-native'
 import { auth } from '../firebase'
-import datavalues from '../src/datavalues'
-
 
 
 const HomeScreen = () => {
     // TODO: create variable to store numpoints
-    // var numPoints = datavalues.numPoints;
-    // var subtotal = datavalues.subtotal;
     var numPoints = 0;
-    var subtotal = 0;
 
     
     const navigation = useNavigation()
@@ -37,8 +32,8 @@ const HomeScreen = () => {
         navigation.navigate("Bagel")
     }
 
-    const handleBreadDescription= () => {
-        navigation.navigate("Bread")
+    const handleProfilePage = () => {
+        navigation.navigate("Profile")
     }
 
 
@@ -62,16 +57,15 @@ const HomeScreen = () => {
                 <View style={styles.rightTopBar}>
                     <Text onPress={alertPoints} style={styles.topBarText}>Points:</Text>
                     <Text onPress={handleCartDescription} style={styles.topBarText}>Cart</Text>
+                    <TouchableOpacity onPress={handleProfilePage}>
+                        <Image style={styles.profilepic} source={require('../assets/profile.png')} />
+                    </TouchableOpacity>
                 </View>
             </View>
 
             <ScrollView style={styles.itemScroll}>
 
-                <Text style={styles.heading}>Welcome!</Text>
-
-                <Text style={styles.subheading}>Trending Items</Text>
-
-
+                <Text style={styles.heading}>Welcome, Harysh!</Text>
 
                 <TouchableOpacity onPress={handleBagelDescription}>
                     <View style={styles.items}>
@@ -80,7 +74,8 @@ const HomeScreen = () => {
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={handleBreadDescription}>
+                <TouchableOpacity>
+
                 <View style={styles.items}>
                     <View>
                         <Image style={styles.itemImage} source={require('../assets/bread-loaf.jpg')} />
@@ -203,11 +198,6 @@ const HomeScreen = () => {
             textAlign: 'center',
             margin: 20,
         },
-        subheading: {
-            fontSize: 30,
-            textAlign: 'center',
-            margin: 15,
-        },
         items: {
             flexDirection: 'row',
             justifyContent: 'center',
@@ -236,6 +226,11 @@ const HomeScreen = () => {
             alignItems: 'center',
             marginTop: 40,
         },
+        profilepic: {
+            height: 50,
+            width: 50,
+            marginLeft: 350,
+        }
         // buttonText: {
         //     color: 'white',
         //     fontWeight: '700',
