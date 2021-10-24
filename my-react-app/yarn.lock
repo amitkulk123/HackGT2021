@@ -1712,6 +1712,15 @@
     "query-string" "^7.0.0"
     "react-is" "^16.13.0"
 
+"@react-navigation/drawer@^6.1.8":
+  "integrity" "sha512-kYE2EO5dianUuUcaYmAlYBcgtmvGm2fxWTQ5sn103cgPNidp4KBUR9ClkhF+btfRaHKq+8Ul5M6qvL0mBAv/Lg=="
+  "resolved" "https://registry.npmjs.org/@react-navigation/drawer/-/drawer-6.1.8.tgz"
+  "version" "6.1.8"
+  dependencies:
+    "@react-navigation/elements" "^1.2.1"
+    "color" "^3.1.3"
+    "warn-once" "^0.1.0"
+
 "@react-navigation/elements@^1.2.1":
   "integrity" "sha512-EnmAbKMsptrliRKf95rdgS6BhMjML+mIns06+G1Vdih6BrEo7/0iytThUv3WBf99AI76dyEq/cqLUwHPiFzXWg=="
   "resolved" "https://registry.npmjs.org/@react-navigation/elements/-/elements-1.2.1.tgz"
@@ -5104,7 +5113,7 @@
     "jscodeshift" "^0.11.0"
     "nullthrows" "^1.1.1"
 
-"react-native-gesture-handler@^1.0.12", "react-native-gesture-handler@>= 1.5.0":
+"react-native-gesture-handler@^1.0.12", "react-native-gesture-handler@>= 1.0.0", "react-native-gesture-handler@>= 1.5.0":
   "integrity" "sha512-cBGMi1IEsIVMgoox4RvMx7V2r6bNKw0uR1Mu1o7NbuHS6BRSVLq0dP34l2ecnPlC+jpWd3le6Yg1nrdCjby2Mw=="
   "resolved" "https://registry.npmjs.org/react-native-gesture-handler/-/react-native-gesture-handler-1.10.3.tgz"
   "version" "1.10.3"
@@ -5120,7 +5129,7 @@
   "resolved" "https://registry.npmjs.org/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.3.1.tgz"
   "version" "1.3.1"
 
-"react-native-reanimated@^1.0.0":
+"react-native-reanimated@^1.0.0", "react-native-reanimated@>= 1.0.0":
   "integrity" "sha512-i714H24dv6ncpFO7/SZ0PfAMbvjgVbF8Ow2NPtowoZAz8osS54DmTMrkgJ9Za+uEku/s0AEaxqiXG2Xgntvv2g=="
   "resolved" "https://registry.npmjs.org/react-native-reanimated/-/react-native-reanimated-1.13.3.tgz"
   "version" "1.13.3"
@@ -5145,6 +5154,11 @@
   "version" "3.8.0"
   dependencies:
     "warn-once" "^0.1.0"
+
+"react-native-select-dropdown@^1.2.0":
+  "integrity" "sha512-qFbldUJFjcruyEmxQThuUtsPYGt7aGYrVtgDfivuJCodjGJEFed2DvcZUd9JJYk1uWe/OfSxWi2KsXYeoB2ZIw=="
+  "resolved" "https://registry.npmjs.org/react-native-select-dropdown/-/react-native-select-dropdown-1.2.0.tgz"
+  "version" "1.2.0"
 
 "react-native-web@0.17.1":
   "integrity" "sha512-lUnn+2O8ynQ6/gJKylSxm7DLi2vHw6AujdDV1+LSa8Epe1bYFJNUcJTEhJf0jNYUFGOujzMtuG8Mkz3HdWTkag=="

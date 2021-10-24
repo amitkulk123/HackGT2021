@@ -2,20 +2,21 @@ import { useNavigation } from '@react-navigation/core'
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View, Image, ScrollView, Alert } from 'react-native'
 import { auth } from '../firebase'
+import SelectDropdown from 'react-native-select-dropdown'
+import { NavigationContainer } from '@react-navigation/native';
+import {
+  createDrawerNavigator,
+  DrawerContentScrollView,
+  DrawerItemList,
+  DrawerItem,
+} from '@react-navigation/drawer';
 
 
 const HomeScreen = () => {
-    const navigation = useNavigation()
-    const handleSignOut = () => {
-        auth
-        .signOut()
-        .then(() => {
-            navigation.navigate("Login")
-        })
-        .catch(error => alert(error.message))
-    }
+
     
     return (
+        
         <View style={styles.container}>
             
             {/* <Text>Email: {auth.currentUser?.email}</Text>
@@ -37,6 +38,10 @@ const HomeScreen = () => {
                     <Text style={styles.topBarText}>Cart</Text>
                 </View>
             </View>
+
+
+            
+
 
             <ScrollView style={styles.itemScroll}>
 
@@ -101,7 +106,7 @@ const HomeScreen = () => {
         )
     }
     
-    export default HomeScreen
+    // export default HomeScreen
     
     const styles = StyleSheet.create({
         container: {
@@ -140,7 +145,7 @@ const HomeScreen = () => {
             padding: 10,
             marginBottom: 20,
             // backgroundColor: 'rgba(244,164,96,1)'
-            backgroundColor: '#fff'
+            backgroundColor: 'rgba(244,244,244,1)'
 
         },
         itemImage: {
@@ -150,7 +155,8 @@ const HomeScreen = () => {
         },
         itemName: {
             fontSize: 20,
-            margin: 20
+            margin: 20,
+            fontFamily: "Times New Roman",
         },
         button: {
             backgroundColor: '#0782F9',
