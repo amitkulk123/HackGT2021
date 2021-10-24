@@ -9,9 +9,12 @@ export default function BagelDescription() {
     return (
         <View>
             <Text>Bagels are tasty!</Text>
-            <Text>Available for $3.00</Text>
+            <Text>Enjoy the crisp, shiny crust of our freshly baked bagels</Text>
+            
+            {/* <TextInput> */}
+            <Button title="Buy Now $3.00" />
         </View>
 
-        // <Button title="Buy Now $3.00"/>
+        
     );
   }
