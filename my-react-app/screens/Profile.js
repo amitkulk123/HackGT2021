@@ -1,7 +1,6 @@
 import { useNavigation } from '@react-navigation/core'
 import React from 'react'
-import { StyleSheet, Text, TextInput, View, KeyboardAvoidingView} from 'react-native'
-
+import { StyleSheet, Text, TextInput, View, KeyboardAvoidingView, TouchableOpacity} from 'react-native'
 
 const handleProfilePage = () => {
     navigation.navigate("Profile")
@@ -32,6 +31,8 @@ export default function Profile() {
                 secureTextEntry
             />
         </View>
+
+            
         </KeyboardAvoidingView>
         
     )

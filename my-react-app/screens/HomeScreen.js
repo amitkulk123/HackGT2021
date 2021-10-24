@@ -1,8 +1,8 @@
 import { useNavigation } from '@react-navigation/core'
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View, Image, ScrollView, Alert, Button } from 'react-native'
-import { auth } from '../firebase'
 import '../src/globalvars.js'
+import { auth } from '../firebase'
 
 
 const HomeScreen = () => {
@@ -48,17 +48,15 @@ const HomeScreen = () => {
 
     return (
         <View style={styles.container}>
-            
-            {/* <Text>Email: {auth.currentUser?.email}</Text>
+
+            <View style={styles.topBar}>
+                {/* <Text>Email: {auth.currentUser?.email}</Text>
                 <TouchableOpacity
                 onPress={handleSignOut}
                 style={styles.button}
                 >
                 <Text style={styles.buttonText}>Sign out</Text>
-            </TouchableOpacity>*/}
-
-            <View style={styles.topBar}>
-                
+            </TouchableOpacity> */}
  
             <TouchableOpacity onPress = {() => { Alert.alert("Side bar appears")}}>
                 <Image style={styles.barImage} source={require("../assets/bars.png")} />
