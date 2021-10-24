@@ -3,6 +3,10 @@ import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View, Image, ScrollView, Alert, Button } from 'react-native'
 
 
+const handleCartDescription = () => {
+    navigation.navigate("Cart")
+}
+
 
 export default function Cart() {
     return (

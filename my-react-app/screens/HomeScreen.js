@@ -4,9 +4,11 @@ import { StyleSheet, Text, TouchableOpacity, View, Image, ScrollView, Alert, But
 import { auth } from '../firebase'
 
 
+
 const HomeScreen = () => {
     // TODO: create variable to store numpoints
     var numPoints = 0;
+    var totalCost = 0;
 
     
     const navigation = useNavigation()
@@ -29,7 +31,9 @@ const HomeScreen = () => {
     }
 
     const handleBagelDescription= () => {
+        myPoints += 20
         navigation.navigate("Bagel")
+
     }
 
 
