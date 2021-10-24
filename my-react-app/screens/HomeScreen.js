@@ -24,7 +24,7 @@ const HomeScreen = () => {
                 style={styles.button}
                 >
                 <Text style={styles.buttonText}>Sign out</Text>
-    </TouchableOpacity>*/}
+            </TouchableOpacity>*/}
 
             <View style={styles.topBar}>
                 
@@ -40,59 +40,80 @@ const HomeScreen = () => {
 
             <ScrollView style={styles.itemScroll}>
 
-                <Text style={styles.heading}>Suggested</Text>
+                <Text style={styles.heading}>Welcome, Harysh!</Text>
 
                 <View style={styles.items}>
-                    <Image style={styles.itemImage} source={require('../assets/bagel.jpg')} />
-                    <Text style={styles.itemName}>Bagel</Text>
+                    <View>
+                        <Image style={styles.itemImage} source={require('../assets/bagel.jpg')} />
+                        <Text style={styles.itemName}>Bagel</Text>
+                    </View>
+                </View>
+
+
+                <View style={styles.items}>
+                    <View>
+                        <Image style={styles.itemImage} source={require('../assets/bread-loaf.jpg')} />
+                        <Text style={styles.itemName}>Bread Loaf</Text>
+                    </View>
                 </View>
 
                 <View style={styles.items}>
-                    <Image style={styles.itemImage} source={require('../assets/bread-loaf.jpg')} />
-                    <Text style={styles.itemName}>Bread Loaf</Text>
+                    <View>
+                        <Image style={styles.itemImage} source={require('../assets/cake.jpg')} />
+                        <Text style={styles.itemName}>Cake</Text>
+                    </View>
                 </View>
 
                 <View style={styles.items}>
-                    <Image style={styles.itemImage} source={require('../assets/cake.jpg')} />
-                    <Text style={styles.itemName}>Cake</Text>
+                    <View>
+                        <Image style={styles.itemImage} source={require('../assets/chocolate-cookie.jpg')} />
+                        <Text style={styles.itemName}>Cookie</Text>
+                    </View>
                 </View>
 
                 <View style={styles.items}>
-                    <Image style={styles.itemImage} source={require('../assets/chocolate-cookie.jpg')} />
-                    <Text style={styles.itemName}>Chocolate Cookie</Text>
+                    <View>
+                        <Image style={styles.itemImage} source={require('../assets/cinnamon-roll.jpg')} />
+                        <Text style={styles.itemName}>Cinnamon Roll</Text>
+                    </View>
                 </View>
 
                 <View style={styles.items}>
-                    <Image style={styles.itemImage} source={require('../assets/cinnamon-roll.jpg')} />
-                    <Text style={styles.itemName}>Cinnamon Roll</Text>
+                    <View>
+                        <Image style={styles.itemImage} source={require('../assets/croissant.jpg')} />
+                        <Text style={styles.itemName}>Croissant</Text>
+                    </View>
                 </View>
 
                 <View style={styles.items}>
-                    <Image style={styles.itemImage} source={require('../assets/croissant.jpg')} />
-                    <Text style={styles.itemName}>Croissant</Text>
+                    <View>
+                        <Image style={styles.itemImage} source={require('../assets/latte.jpg')} />
+                        <Text style={styles.itemName}>Latte</Text>
+                    </View>
                 </View>
 
                 <View style={styles.items}>
-                    <Image style={styles.itemImage} source={require('../assets/latte.jpg')} />
-                    <Text style={styles.itemName}>Latte</Text>
+                    <View>
+                        <Image style={styles.itemImage} source={require('../assets/muffin-blueberry.jpg')} />
+                        <Text style={styles.itemName}>Blueberry Muffin</Text>
+                    </View>
                 </View>
 
                 <View style={styles.items}>
-                    <Image style={styles.itemImage} source={require('../assets/muffin-blueberry.jpg')} />
-                    <Text style={styles.itemName}>Blueberry Muffin</Text>
+                    <View>
+                        <Image style={styles.itemImage} source={require('../assets/muffin-chocolate.jpg')} />
+                        <Text style={styles.itemName}>Chocolate Muffin</Text>
+                    </View>
                 </View>
 
                 <View style={styles.items}>
-                    <Image style={styles.itemImage} source={require('../assets/muffin-chocolate.jpg')} />
-                    <Text style={styles.itemName}>Chocolate Muffin</Text>
+                    <View>
+                        <Image style={styles.itemImage} source={require('../assets/pizza.jpg')} />
+                        <Text style={styles.itemName}>Pizza</Text>
+                    </View>
                 </View>
 
-                <View style={styles.items}>
-                    <Image style={styles.itemImage} source={require('../assets/pizza.jpg')} />
-                    <Text style={styles.itemName}>Pizza</Text>
-                </View>
-
-                </ScrollView>
+            </ScrollView>
 
                 
         </View>
@@ -110,18 +131,20 @@ const HomeScreen = () => {
         },
         topBar: {
             flexDirection: 'row',
-            backgroundColor: 'teal',
             height: 50,
             alignItems: 'center',
+            backgroundColor: 'teal',
+            opacity: 0.7
         },
         topBarText: {
             marginLeft: 100,
             marginRight: 20,
+            fontWeight: 'bold'
         },
         rightTopBar: {
             flexDirection: 'row',
             justifyContent: 'flex-end',
-            margin: 10,
+            margin: 10
         },
         barImage: {
             height: 50,
@@ -129,7 +152,6 @@ const HomeScreen = () => {
         },
         heading: {
             fontSize: 50,
-            fontStyle: 'italic',
             textAlign: 'center',
             margin: 20,
         },
@@ -146,11 +168,12 @@ const HomeScreen = () => {
         itemImage: {
             width: 100,
             height: 100,
-            margin: 20,
+            margin: 40,
         },
         itemName: {
             fontSize: 20,
-            margin: 20
+            alignContent: 'center',
+            textAlign: 'center'
         },
         button: {
             backgroundColor: '#0782F9',
