@@ -8,8 +8,10 @@ import datavalues from '../src/datavalues'
 
 const HomeScreen = () => {
     // TODO: create variable to store numpoints
-    var numPoints = datavalues.numPoints;
-    var subtotal = datavalues.subtotal;
+    // var numPoints = datavalues.numPoints;
+    // var subtotal = datavalues.subtotal;
+    var numPoints = 0;
+    var subtotal = 0;
 
     
     const navigation = useNavigation()
@@ -32,9 +34,11 @@ const HomeScreen = () => {
     }
 
     const handleBagelDescription= () => {
-        myPoints += 20
         navigation.navigate("Bagel")
+    }
 
+    const handleBreadDescription= () => {
+        navigation.navigate("Bread")
     }
 
 
@@ -76,8 +80,7 @@ const HomeScreen = () => {
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity>
-
+                <TouchableOpacity onPress={handleBreadDescription}>
                 <View style={styles.items}>
                     <View>
                         <Image style={styles.itemImage} source={require('../assets/bread-loaf.jpg')} />

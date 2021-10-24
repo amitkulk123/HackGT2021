@@ -6,16 +6,16 @@ import { auth } from '../../firebase'
 
 const handleButton = () => {
     
-    Alert.alert("Added a bagel to your cart")
+    Alert.alert("Added a loaf to your cart")
 }
 
 export default function BagelDescription() {
     return (
         <View style={styles.container}>
-            <Text style={styles.textFormat}>Bagels are tasty!</Text>
-            <Text style={styles.textFormat}>Enjoy the crisp, shiny crust of our freshly baked bagels</Text>
-            <Image style={styles.itemImage} source={require('../../assets/bagel.jpg')} />
-            <Button onPress={handleButton} title="Buy Now $3.00" />
+            <Text style={styles.textFormat}>Get, a nice big loaf of bread to feed you for a while!</Text>
+            <Text style={styles.textFormat}>Let's get that bread!</Text>
+            <Image style={styles.itemImage} source={require('../../assets/bread-loaf.jpg')} />
+            <Button onPress={handleButton} title="Buy Now $7.00" />
         </View>
 
         
