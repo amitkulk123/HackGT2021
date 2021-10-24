@@ -1,0 +1,35 @@
+Categories
+Food
+Sports
+Entertainment
+Shopping
+Travel
+
+[Item][Price]
+- Randomly organizes each item
+- Ask for quantity
+- Buy it again
+
+
+[Loaf of Bread]			[$4.00]	
+[Croissant]				[$3.20]
+[Bagel]					[$2.75]
+[Latte]					[$3.00]
+[Cinnamon Roll]			[$3.76]
+[Blueberry Muffin]		[$2.61]
+[Chocolate Muffin]		[$2.61]
+[Large Pizza]			[$10.00]
+[Cookie]				[$0.75]
+[Cake]					[$6.00]
+
+
+
+
+
+
+
+
+
+Users
+[]
+
