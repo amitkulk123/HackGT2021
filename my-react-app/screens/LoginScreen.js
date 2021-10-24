@@ -1,15 +1,28 @@
 import { useNavigation } from '@react-navigation/core'
 import React, { useEffect, useState } from 'react'
-import { KeyboardAvoidingView, StyleSheet, Text, TextInput,TouchableOpacity, View} from 'react-native'
+import { KeyboardAvoidingView, StyleSheet, Text, TextInput,TouchableOpacity, View, ImageBackground, Image} from 'react-native'
 import { auth } from '../firebase'
 
 const LoginScreen = () => {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
 
 
     const navigation = useNavigation()
+
+    const writeuserdata = () => {
+        firebase.database().ref('Entry/').set({
+            firstName,
+            lastName
+        }).then((data) => {
+            console.log('data', data)
+        }).catch((error) => {
+            console.log('error', error)
+        })
+    }
     
     useEffect(() => {
         const unsubsribe = auth.onAuthStateChanged(user => {
@@ -42,11 +55,25 @@ const LoginScreen = () => {
     }
 
     return (
+        <ImageBackground source={require('../assets/loginbackground.png')} style={styles.image}>
         <KeyboardAvoidingView
-            style = {styles.container}
-            behavior = "padding"
+        style={styles.container}
+        behavior = "padding"
         >
+        <Image source={require('../assets/proximity_logo.png')}/>
         <View style={styles.inputContainer}>
+            <TextInput
+                placeholder = "First Name"
+                value = {firstName}
+                onChangeText = {text => setFirstName(text)}
+                style = {styles.input}
+            />
+            <TextInput
+                placeholder = "Last Name"
+                value = {lastName}
+                onChangeText = {text => setLastName(text)}
+                style = {styles.input}
+            />
             <TextInput
                 placeholder = "Email"
                 value = {email}
@@ -77,6 +104,7 @@ const LoginScreen = () => {
             </TouchableOpacity>
         </View>
         </KeyboardAvoidingView>
+        </ImageBackground>
     )
 }
 
@@ -87,6 +115,10 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    figBackground: {
+        backgroundColor: '#73DDFF',
+        
     },
     inputContainer: {
         width: '80%'
@@ -126,5 +158,12 @@ const styles = StyleSheet.create({
         color: 'white',
         fontWeight: '700',
         fontSize: 16,
+    },
+    image: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 0,
     }
 })
