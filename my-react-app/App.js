@@ -9,7 +9,7 @@ import CartScreen from './screens/Cart';
 import ProfileScreen from './screens/Profile';
 import BagelDescription from './screens/itemScreens/BagelDescription';
 import BreadDescription from './screens/itemScreens/BreadDescription';
-//import FriendScreen from './screens/Friends';
+import FriendScreen from './screens/Friends';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,7 +21,7 @@ export default function App() {
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Cart" component={CartScreen} />
         <Stack.Screen name="Profile" component={ProfileScreen} />
-        {/*<Stack.Screen name="Friends" component={FriendScreen}/> */}
+        <Stack.Screen name="Friends" component={FriendScreen}/>
         <Stack.Screen name="Bagel" component={BagelDescription} />
         <Stack.Screen name="Bread" component={BreadDescription} />
       </Stack.Navigator>

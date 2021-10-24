@@ -36,6 +36,10 @@ const HomeScreen = () => {
         navigation.navigate("Profile")
     }
 
+    const handleFriendPage = () => {
+        navigation.navigate("Friends")
+    }
+
 
     return (
         <View style={styles.container}>
@@ -57,6 +61,7 @@ const HomeScreen = () => {
                 <View style={styles.rightTopBar}>
                     <Text onPress={alertPoints} style={styles.topBarText}>Points:</Text>
                     <Text onPress={handleCartDescription} style={styles.topBarText}>Cart</Text>
+                    <Text onPress={handleFriendPage} style={styles.topBarText}>Friends</Text>
                     <TouchableOpacity onPress={handleProfilePage}>
                         <Image style={styles.profilepic} source={require('../assets/profile.png')} />
                     </TouchableOpacity>
@@ -229,7 +234,7 @@ const HomeScreen = () => {
         profilepic: {
             height: 50,
             width: 50,
-            marginLeft: 350,
+            marginLeft: 200,
         }
         // buttonText: {
         //     color: 'white',

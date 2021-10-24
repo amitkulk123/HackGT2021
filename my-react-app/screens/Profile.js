@@ -7,16 +7,15 @@ const handleProfilePage = () => {
     navigation.navigate("Profile")
 }
 
-
 export default function Profile() {
     return (
         <KeyboardAvoidingView
         style={styles.container}
         behavior = "padding"
         >
-            <View>
-                <Text styles={styles.text}>Profile</Text>
-            </View>
+        <View>
+            <Text styles={styles.text}>Profile</Text>
+        </View>
         <View style={styles.inputContainer}>
             <TextInput
                 placeholder = "Harysh"
@@ -52,7 +51,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'teal'
+        backgroundColor: '#87C6DB'
     },
     text: {
         fontSize: 20
