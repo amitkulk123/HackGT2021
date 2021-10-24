@@ -18,19 +18,24 @@ const HomeScreen = () => {
     return (
         <View style={styles.container}>
             
-            <Text>Welcome, </Text>
-            <Text>Email: {auth.currentUser?.email}</Text>
+            {/* <Text>Email: {auth.currentUser?.email}</Text>
                 <TouchableOpacity
                 onPress={handleSignOut}
                 style={styles.button}
                 >
                 <Text style={styles.buttonText}>Sign out</Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
+
             <View style={styles.topBar}>
-                <Text>Amit</Text>
+                <Text>User</Text>
+                <Text>Points</Text>
+                <Text>Cart</Text>
             </View>
 
             <ScrollView style={styles.itemScroll}>
+
+                <Text style={styles.heading}>Your Items</Text>
+
                 <View style={styles.items}>
                     <Image style={styles.itemImage} source={require('../assets/bagel.jpg')} />
                     <Text style={styles.itemName}>Bagel</Text>
@@ -97,6 +102,16 @@ const HomeScreen = () => {
             flex: 1,
             // justifyContent: 'center',
             // alignItems: 'center',
+        },
+        topBar: {
+            flexDirection: 'row',
+            backgroundColor: 'red',
+        },
+        heading: {
+            fontSize: 50,
+            fontStyle: 'italic',
+            textAlign: 'center',
+            margin: 20,
         },
         items: {
             flexDirection: 'row',
