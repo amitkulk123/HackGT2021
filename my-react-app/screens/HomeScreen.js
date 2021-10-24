@@ -37,6 +37,9 @@ const HomeScreen = () => {
         global.numPoints += 5
         navigation.navigate("Bread")
     }
+    const handleProfilePage = () => {
+        navigation.navigate("Profile")
+    }
     const handleCakeDescription= () => {
         global.numPoints += 5
         navigation.navigate("Cake")
@@ -63,16 +66,15 @@ const HomeScreen = () => {
                 <View style={styles.rightTopBar}>
                     <Text onPress={alertPoints} style={styles.topBarText}>Points</Text>
                     <Text onPress={handleCartDescription} style={styles.topBarText}>Cart</Text>
+                    <TouchableOpacity onPress={handleProfilePage}>
+                        <Image style={styles.profilepic} source={require('../assets/profile.png')} />
+                    </TouchableOpacity>
                 </View>
             </View>
 
             <ScrollView style={styles.itemScroll}>
 
-                <Text style={styles.heading}>Welcome!</Text>
-
-                <Text style={styles.subheading}>Trending Items</Text>
-
-
+                <Text style={styles.heading}>Welcome, Harysh!</Text>
 
                 <TouchableOpacity onPress={handleBagelDescription}>
                     <View style={styles.items}>
@@ -81,7 +83,8 @@ const HomeScreen = () => {
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={handleBreadDescription}>
+                <TouchableOpacity>
+
                 <View style={styles.items}>
                     <View>
                         <Image style={styles.itemImage} source={require('../assets/bread-loaf.jpg')} />
@@ -238,6 +241,11 @@ const HomeScreen = () => {
             alignItems: 'center',
             marginTop: 40,
         },
+        profilepic: {
+            height: 50,
+            width: 50,
+            marginLeft: 350,
+        }
         // buttonText: {
         //     color: 'white',
         //     fontWeight: '700',
