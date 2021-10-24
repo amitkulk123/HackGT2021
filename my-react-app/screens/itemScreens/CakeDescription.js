@@ -9,7 +9,7 @@ const handleButton = () => {
     Alert.alert("Added a slice of cake to your cart")
 }
 
-export default function BagelDescription() {
+export default function CakeDescription() {
     return (
         <View style={styles.container}>
             <Text style={styles.textFormat}>Enjoy a delicious, savory piece of cake that will want you to get some more.</Text>

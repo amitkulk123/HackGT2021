@@ -54,7 +54,7 @@ const HomeScreen = () => {
         <View style={styles.container}>
 
             <View style={styles.topBar}>
-                {/* <Text>Email: {auth.currentUser?.email}</Text>
+                {/*<Text>Email: {auth.currentUser?.email}</Text>
                 <TouchableOpacity
                 onPress={handleSignOut}
                 style={styles.button}
@@ -192,9 +192,10 @@ const HomeScreen = () => {
             opacity: 0.7
         },
         topBarText: {
-            marginLeft: 100,
-            marginRight: 20,
-            fontWeight: 'bold'
+            marginLeft: 25,
+            // marginRight: 20,
+            fontWeight: 'bold',
+            alignSelf: 'center'
         },
         rightTopBar: {
             flexDirection: 'row',
@@ -247,7 +248,8 @@ const HomeScreen = () => {
         profilepic: {
             height: 50,
             width: 50,
-            marginLeft: 200,
+            
+            marginLeft: 40,
         }
         // buttonText: {
         //     color: 'white',

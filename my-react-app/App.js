@@ -9,6 +9,7 @@ import CartScreen from './screens/Cart';
 import ProfileScreen from './screens/Profile';
 import BagelDescription from './screens/itemScreens/BagelDescription';
 import BreadDescription from './screens/itemScreens/BreadDescription';
+import CakeDescription from './screens/itemScreens/CakeDescription';
 import FriendScreen from './screens/Friends';
 
 const Stack = createNativeStackNavigator();

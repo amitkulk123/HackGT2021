@@ -23,7 +23,13 @@ export default function Cart() {
             <Text style={styles.final}>${global.subtotal - global.numPoints*0.02}</Text>
 
 
-            <Button onPress={handleButton} title="Complete Payment" />
+            <Text style={styles.header}>Payment Options</Text>
+            <Button onPress={handleButton} title="Pay with NCR Coin" />
+            <Button onPress={handleButton} title="Pay with Credit/Debit" />
+            <Button onPress={handleButton} title="Pay with Paypal" />
+            <Button onPress={handleButton} title="Pay with Bitcoin" />
+
+
         </View>
     );
   }
@@ -38,6 +44,10 @@ export default function Cart() {
     amount: {
         fontSize: 30,
         color: 'green',
+    },
+    header: {
+        marginTop: 30,
+        fontSize:20.
     },
     final: {
         fontSize: 40,
