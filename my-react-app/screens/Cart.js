@@ -2,17 +2,54 @@ import { useNavigation } from '@react-navigation/core'
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View, Image, ScrollView, Alert, Button } from 'react-native'
 
-
-const handleCartDescription = () => {
-    navigation.navigate("Cart")
+const handleButton = () => {
+    Alert.alert("Payment successful!")
 }
+
+
 
 
 export default function Cart() {
     return (
-        <View>
-            <Text>Your subtotal is </Text>
-            <Text>The number of points you have is</Text>
+        <View style={styles.container}>
+            <Text style={styles.textFormat}>Your subtotal is ${global.subtotal}</Text>
+            <Text style={styles.amount}>${global.subtotal}</Text>
+            {/* 1 point is 0.02 cents*/}
+            
+            <Text style={styles.textFormat}>With {global.numPoints} points, you save </Text>
+            <Text style={styles.amount}>${global.numPoints * 0.02}</Text>
+
+            <Text style={styles.textFormat}>Your final amount is:</Text>
+            <Text style={styles.final}>${global.subtotal - global.numPoints*0.02}</Text>
+
+
+            <Button onPress={handleButton} title="Complete Payment" />
         </View>
     );
   }
+
+
+  const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        // justifyContent: 'center',
+        alignItems: 'center',
+    },
+    amount: {
+        fontSize: 30,
+        color: 'green',
+    },
+    final: {
+        fontSize: 40,
+        color: 'green',
+    },
+    textFormat: {
+        fontSize: 20,
+        margin: 20,
+    },
+    itemImage: {
+        height: 250,
+        width: 250,
+        margin: 30,
+    }
+})
