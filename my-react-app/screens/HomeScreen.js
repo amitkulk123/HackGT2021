@@ -2,13 +2,14 @@ import { useNavigation } from '@react-navigation/core'
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View, Image, ScrollView, Alert, Button } from 'react-native'
 import { auth } from '../firebase'
+import datavalues from '../src/datavalues'
 
 
 
 const HomeScreen = () => {
     // TODO: create variable to store numpoints
-    var numPoints = 0;
-    var totalCost = 0;
+    var numPoints = datavalues.numPoints;
+    var subtotal = datavalues.subtotal;
 
     
     const navigation = useNavigation()
@@ -62,7 +63,9 @@ const HomeScreen = () => {
 
             <ScrollView style={styles.itemScroll}>
 
-                <Text style={styles.heading}>Welcome, Harysh!</Text>
+                <Text style={styles.heading}>Welcome!</Text>
+
+                <Text style={styles.subheading}>Trending Items</Text>
 
 
 
@@ -196,6 +199,11 @@ const HomeScreen = () => {
             fontSize: 50,
             textAlign: 'center',
             margin: 20,
+        },
+        subheading: {
+            fontSize: 30,
+            textAlign: 'center',
+            margin: 15,
         },
         items: {
             flexDirection: 'row',
